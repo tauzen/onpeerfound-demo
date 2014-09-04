@@ -1,0 +1,17 @@
+{
+  "version": "0.1.0",
+  "name": "onPeerFound Demo",
+  "description": "Demo app showing how to use nfc onpeerfound event to share content",
+  "launch_path": "/index.html",
+  "icons": {
+    "16": "/img/icons/icon16x16.png",
+    "48": "/img/icons/icon48x48.png",
+    "60": "/img/icons/icon60x60.png",
+    "128": "/img/icons/icon128x128.png"
+  },
+  "type": "certified",
+  "permissions": {
+    "nfc":{ "access": "readwrite" }
+  },
+  "default_locale": "en"
+}
