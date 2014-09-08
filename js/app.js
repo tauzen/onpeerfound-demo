@@ -29,15 +29,14 @@ window.addEventListener('DOMContentLoaded', function() {
   var nfcUtils = new NfcUtils();
   var tnf = NDEF.TNF_WELL_KNOWN;
   var type = NDEF.RTD_URI;
-  var id = new Uint8Array();
   var url = nfcUtils.fromUTF8('\u0003thecatapi.com/api/images/get?format=src&type=gif');
-  var record = new MozNDEFRecord(tnf, type, id, url);
+  var record = new MozNDEFRecord({tnf:tnf, type:type, payload:url});
 
   if (navigator.mozNfc) {
     document.addEventListener('visibilitychange', handleVisibiltyChange, false);
     navigator.mozNfc.onpeerfound = onPeerFoundHandler;
     navigator.mozNfc.onpeerlost = onPeerLostHandler;
   } else {
-    updateUIText('sorry','Your device does not support nfc');
+    updateUIText('status','Your device does not support nfc.');
   }
 });
