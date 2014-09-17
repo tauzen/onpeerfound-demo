@@ -21,14 +21,14 @@
 
     TNF: 0x07,
 
-    TNF_EMPTY: 0x00,
-    TNF_WELL_KNOWN: 0x01,
-    TNF_MIME_MEDIA: 0x02,
-    TNF_ABSOLUTE_URI: 0x03,
-    TNF_EXTERNAL_TYPE: 0x04,
-    TNF_UNKNOWN: 0x05,
-    TNF_UNCHANGED: 0x06,
-    TNF_RESERVED: 0x07,
+    TNF_EMPTY: 'empty',
+    TNF_WELL_KNOWN: 'well-known',
+    TNF_MIME_MEDIA: 'media-type',
+    TNF_ABSOLUTE_URI: 'absolute-uri',
+    TNF_EXTERNAL_TYPE: 'external',
+    TNF_UNKNOWN: 'unknown',
+    TNF_UNCHANGED: 'unchanged',
+    TNF_RESERVED: 'reserved',
 
     RTD_TEXT: 0,
     RTD_URI: 0,

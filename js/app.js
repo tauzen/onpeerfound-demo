@@ -17,15 +17,6 @@ window.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => updateUIText('status', ''), 10000);
   }
 
-  function handleVisibiltyChange() {
-    if (document.hidden) {
-      navigator.mozNfc.onpeerfound = null;
-    } else {
-      navigator.mozNfc.onpeerfound = onPeerFoundHandler;
-      navigator.mozNfc.onpeerlost = onPeerLostHandler;
-    }
-  }
-
   var nfcUtils = new NfcUtils();
   var tnf = NDEF.TNF_WELL_KNOWN;
   var type = NDEF.RTD_URI;
@@ -33,7 +24,6 @@ window.addEventListener('DOMContentLoaded', function() {
   var record = new MozNDEFRecord({tnf:tnf, type:type, payload:url});
 
   if (navigator.mozNfc) {
-    document.addEventListener('visibilitychange', handleVisibiltyChange, false);
     navigator.mozNfc.onpeerfound = onPeerFoundHandler;
     navigator.mozNfc.onpeerlost = onPeerLostHandler;
   } else {
